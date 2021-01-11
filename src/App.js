@@ -1,6 +1,6 @@
 
 import { Canvas } from 'react-three-fiber'
-import {OrbitControls} from 'drei'
+import {OrbitControls, Stars} from 'drei'
 import './App.css';
 
 function Box() {
@@ -16,6 +16,12 @@ function App() {
   return (
     <Canvas>
       <OrbitControls />
+      <Stars />
+      <ambientLight intensity={0.5} />
+      <spotLight
+          position={[10, 15, 10]}
+          angle={0.3}
+        />
       <Box />
     </Canvas>
   );
